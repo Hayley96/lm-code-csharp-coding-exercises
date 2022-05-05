@@ -65,5 +65,29 @@ namespace Exercises.Tests
         {
             Exercise005.IsPangram("the 1 quick brown fox jumps over the 2 lazy dogs").Should().Be(true);
         }
+
+        [Test]
+        public void IsPangram_Should_Return_False_For_Missing_Letters_D_and_F()
+        {
+            Exercise005.IsPangram("the quick brown ox jumps over the lazy og").Should().Be(false);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Mixed_NonAlphanumeric_Chars()
+        {
+            Exercise005.IsPangram("the quick - brown fox @ jumps over + the lazy dog").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Duplicate_Letter_B()
+        {
+            Exercise005.IsPangram("the quick brown fox jumps b over the lazy dog").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Duplicate_Letters_B_And_T()
+        {
+            Exercise005.IsPangram("the quickt brown fox jumps b over the lazy dog").Should().Be(true);
+        }
     }
 }

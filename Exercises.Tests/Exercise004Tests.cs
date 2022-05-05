@@ -38,5 +38,10 @@ namespace Exercises.Tests
             actualResult.Should().Be(expectedResult);
         }
 
+        [Test]
+        public void AddGigaSecond_Should_Throw_Exception_When_Incorrect_DateTime_Parameters_Are_Specified()
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => Exercise004.AddGigaSecond(new DateTime(99993, 25, 19, 24, 22, 0)));
+        }
     }
 }
