@@ -41,7 +41,7 @@ namespace Exercises
         public int CountLinuxUsers(List<User> users)
         {
             // count<predicate> and return the number of users in the list whose property 'Type' equals "Linux"
-            int linuxusercount = users.Count(t => t.Type == "Linux");
+            int linuxusercount = users.Count(user => user.Type == "Linux");
             return linuxusercount;
         }
     }

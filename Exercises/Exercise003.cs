@@ -3,10 +3,17 @@ namespace Exercises
 {
     public class Exercise003
     {
-        // Replace the exception statement below with your code!
-        public string[] IceCreamFlavours => throw new NotImplementedException();
+        // define iceCreamFlavours array
+        public string[] IceCreamFlavours = {
+            "Pistachio",
+            "Raspberry Ripple",
+            "Vanilla",
+            "Mint Chocolate Chip",
+            "Chocolate",
+            "Mango Sorbet"};
 
-        // Replace the exception statement below with your code!
-        public int IceCreamCode(string iceCreamFlavour) => throw new NotImplementedException();
+        // return index of ice cream item in IceCreamFlavours where item value/name matches input parameter iceCreamFlavour
+        public int IceCreamCode(string iceCreamFlavour) => Array.IndexOf(IceCreamFlavours, iceCreamFlavour);
+
     }
 }
