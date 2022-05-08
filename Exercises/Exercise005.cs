@@ -6,9 +6,7 @@ namespace Exercises
 {
     public class Exercise005
     {
-        public bool IsPangram(string input)
-        {
-            return String.IsNullOrEmpty(input) ? false : input.ToLower().Where(letter => Char.IsLetter(letter)).GroupBy(letter => letter).Count().Equals(Constants.EngAlphabetSize);
-        }
+        public bool IsPangram(string input) => 
+            String.IsNullOrEmpty(input) ? false : input.ToLower().Where(letter => Char.IsLetter(letter)).GroupBy(letter => letter).Count().Equals(Constants.EngAlphabetSize);
     }
 }

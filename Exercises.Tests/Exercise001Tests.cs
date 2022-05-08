@@ -24,10 +24,24 @@ namespace Exercises.Tests
         }
 
         [Test]
+        public void CapitalizeWord_Should_Return_Empty_String_If_Input_is_Null_Or_Empty()
+        {
+            Exercise001.CapitalizeWord("").Should().Be("Invalid input");
+            Exercise001.CapitalizeWord(null).Should().Be("Invalid input");
+        }
+
+        [Test]
         public void GenerateInitials_Should_Return_Correct_Initials()
         {
             Exercise001.GenerateInitials("Frederic", "Bonneville").Should().Be("F.B");
             Exercise001.GenerateInitials("James", "Bond").Should().Be("J.B");
+        }
+
+        [Test]
+        public void GenerateInitials_Should_Return_Empty_String_If_Input_is_Null_Or_Empty()
+        {
+            Exercise001.GenerateInitials("", "").Should().Be("Invalid input");
+            Exercise001.GenerateInitials(null, null).Should().Be("Invalid input");
         }
 
         [Test]
@@ -44,6 +58,13 @@ namespace Exercises.Tests
         {
             Exercise001.Reverse("foo").Should().Be("oof");
             Exercise001.Reverse("why would you even want to do this?").Should().Be("?siht od ot tnaw neve uoy dluow yhw");
+        }
+
+        [Test]
+        public void Reverse_Should_Return_Empty_String_If_Input_is_Null_Or_Empty()
+        {
+            Exercise001.Reverse("").Should().Be("Invalid input");
+            Exercise001.Reverse(null).Should().Be("Invalid input");
         }
 
         [Test]
