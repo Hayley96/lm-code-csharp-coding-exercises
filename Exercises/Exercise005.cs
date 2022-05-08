@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Exercises.Models;
 
 namespace Exercises
 {
@@ -7,14 +8,7 @@ namespace Exercises
     {
         public bool IsPangram(string input)
         {
-            
-            bool result;
-            if(input == "") { return false; }   // If 'input' string is empty return false
-            else 
-            {   
-                //convert 'input' string to lowercase; filter where value is a letter, group by value, count the groups, if count == 26: true; else false;
-                return result = input.ToLower().Where(inputVal => Char.IsLetter(inputVal)).GroupBy(inputVal => inputVal).Count() == 26;
-            }
+            return String.IsNullOrEmpty(input) ? false : input.ToLower().Where(letter => Char.IsLetter(letter)).GroupBy(letter => letter).Count().Equals(Constants.EngAlphabetSize);
         }
     }
 }
