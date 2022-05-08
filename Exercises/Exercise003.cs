@@ -11,7 +11,8 @@ namespace Exercises
             "Chocolate",
             "Mango Sorbet"};
 
-        public int IceCreamCode(string iceCreamFlavour) => Array.IndexOf(IceCreamFlavours, iceCreamFlavour);
+        public int IceCreamCode(string iceCreamFlavour) => 
+            Array.IndexOf(IceCreamFlavours, iceCreamFlavour);
 
     }
 }

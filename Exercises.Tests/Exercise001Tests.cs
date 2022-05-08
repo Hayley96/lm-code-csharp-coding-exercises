@@ -24,7 +24,7 @@ namespace Exercises.Tests
         }
 
         [Test]
-        public void CapitalizeWord_Should_Return_Empty_String_If_Input_is_Null_Or_Empty()
+        public void CapitalizeWord_Should_Return_Invalid_Input_String_If_Input_is_Null_Or_Empty()
         {
             Exercise001.CapitalizeWord("").Should().Be("Invalid input");
             Exercise001.CapitalizeWord(null).Should().Be("Invalid input");
@@ -38,10 +38,14 @@ namespace Exercises.Tests
         }
 
         [Test]
-        public void GenerateInitials_Should_Return_Empty_String_If_Input_is_Null_Or_Empty()
+        public void GenerateInitials_Should_Return_Invalid_Input_String_If_Input_is_Null_Or_Empty()
         {
+            Exercise001.GenerateInitials("Ben", "").Should().Be("Invalid input");
+            Exercise001.GenerateInitials("Ben", null).Should().Be("Invalid input");
             Exercise001.GenerateInitials("", "").Should().Be("Invalid input");
             Exercise001.GenerateInitials(null, null).Should().Be("Invalid input");
+            Exercise001.GenerateInitials("", "Smith").Should().Be("Invalid input");
+            Exercise001.GenerateInitials(null, "Smith").Should().Be("Invalid input");
         }
 
         [Test]
@@ -61,7 +65,7 @@ namespace Exercises.Tests
         }
 
         [Test]
-        public void Reverse_Should_Return_Empty_String_If_Input_is_Null_Or_Empty()
+        public void Reverse_Should_Return_Invalid_Input_String_If_Input_is_Null_Or_Empty()
         {
             Exercise001.Reverse("").Should().Be("Invalid input");
             Exercise001.Reverse(null).Should().Be("Invalid input");

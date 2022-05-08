@@ -5,8 +5,10 @@ namespace Exercises
 {
     public class Exercise002
     {
-        public bool IsFromManchester(Person person) => person.City.Equals("Manchester") ? true : false;
+        public bool IsFromManchester(Person person) => 
+            person.City.Equals("Manchester") ? true : false;
 
-        public bool CanWatchFilm(Person person, int ageLimit) => person.Age < ageLimit ? false : true;
+        public bool CanWatchFilm(Person person, int ageLimit) => 
+            person.Age > ageLimit ? true : false;
     }
 }
